@@ -22,9 +22,10 @@ const fetchCurrentDay = async ({ lat, lon, cityName }: ILocation) => {
 };
 
 const fetchNextFiveDays = async ({ lat, lon, cityName }: ILocation) => {
-  const url = cityName
-    ? `/forecast?q=${cityName}&cnt=5&appid=${apiKey}&units=metric&lang=es`
-    : `/forecast?lat=${lat}&lon=${lon}&cnt=5&appid=${apiKey}&units=metric&lang=es`;
+  const url =
+    lon && lat
+      ? `/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=es`
+      : `/forecast?q=${cityName}&appid=${apiKey}&units=metric&lang=es`;
 
   try {
     const response = await axiosAPI.get(url);
