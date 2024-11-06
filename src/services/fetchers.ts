@@ -1,5 +1,5 @@
-import { isAxiosError } from "axios";
 import axiosAPI from "./axios";
+import { isAxiosError } from "axios";
 import { ILocation } from "../lib/interfaces/location";
 const apiKey = import.meta.env.VITE_OPEN_WEATHER_KEY;
 
@@ -16,7 +16,7 @@ const fetchCurrentDay = async ({ lat, lon, cityName }: ILocation) => {
     if (isAxiosError(error)) {
       throw error;
     } else {
-      console.log({ error });
+      console.log(error);
     }
   }
 };
@@ -30,8 +30,12 @@ const fetchNextFiveDays = async ({ lat, lon, cityName }: ILocation) => {
   try {
     const response = await axiosAPI.get(url);
     return response.data;
-  } catch (e) {
-    console.log(e);
+  } catch (error) {
+    if (isAxiosError(error)) {
+      throw error;
+    } else {
+      console.log(error);
+    }
   }
 };
 
