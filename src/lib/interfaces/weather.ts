@@ -1,21 +1,13 @@
 export interface IWeather {
-  cityName: string;
   day: string;
   temp: number;
-  feels_like: number;
   temp_min: number;
   temp_max: number;
-  humidity: number;
-  description: string;
   icon: string;
-}
-
-export interface IWeatherForecast {
-  cityName: string;
-  data: Pick<
-    IWeather,
-    "day" | "temp_min" | "temp_max" | "description" | "icon"
-  >[];
+  cityName?: string;
+  feels_like?: number;
+  humidity?: number;
+  description?: string;
 }
 
 export interface IWeatherTodayResponse {
