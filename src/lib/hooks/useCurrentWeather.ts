@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchCurrentDay } from "../../api/fetchers";
+import { fetchCurrentDay } from "../../services/fetchers";
 import { useAppSelector } from "./useAppSelector";
 import { selectLocation } from "../reducers/locationSlice";
 import { IWeather } from "../interfaces/weather";

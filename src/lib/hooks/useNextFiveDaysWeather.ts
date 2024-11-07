@@ -1,9 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchNextFiveDays } from "../../api/fetchers";
+import { fetchNextFiveDays } from "../../services/fetchers";
 import { useAppSelector } from "./useAppSelector";
 import { selectLocation } from "../reducers/locationSlice";
-import { IWeatherForecast } from "../interfaces/weather";
+
 import { weatherNextFiveFormatter } from "../utils/weatherDataFormatter";
+import { IWeather } from "../interfaces/weather";
 
 const useNextFiveDaysWeather = () => {
   const { cityName, lat, lon } = useAppSelector(selectLocation);
@@ -22,7 +23,7 @@ const useNextFiveDaysWeather = () => {
       }),
   });
 
-  const data: IWeatherForecast = rawData && weatherNextFiveFormatter(rawData);
+  const data: IWeather[] = rawData && weatherNextFiveFormatter(rawData);
 
   return {
     nextDaysWeather: data,
