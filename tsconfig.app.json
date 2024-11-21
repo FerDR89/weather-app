@@ -18,7 +18,19 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    "baseUrl": "./",
+    "paths": {
+      "@*": ["src/*"],
+      "@components": ["src/components"],
+      "@hooks": ["src/lib/hooks"],
+      "@interfaces": ["src/lib/interfaces"],
+      "@reducers": ["src/lib/reducers"],
+      "@utils": ["src/lib/utils"],
+      "@services": ["src/services"],
+      "@store": ["src/store"]
+    }
   },
   "include": ["src"]
 }
