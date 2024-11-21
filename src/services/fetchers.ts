@@ -1,4 +1,4 @@
-import axiosAPI from "./axios";
+import { axiosAPI } from "@services";
 import { isAxiosError } from "axios";
 import { ILocation } from "../lib/interfaces/location";
 const apiKey = import.meta.env.VITE_OPEN_WEATHER_KEY;
