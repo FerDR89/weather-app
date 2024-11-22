@@ -1,5 +1,5 @@
-import { IWeather } from "../../lib/interfaces/weather";
-import Icon from "../icon";
+import { IWeather } from "@interfaces";
+import { Icon } from "@components";
 
 const WeatherCard = ({
   cityName,
