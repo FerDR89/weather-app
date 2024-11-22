@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "../../store/store";
-import { ILocation } from "../interfaces/location";
+import { RootState } from "@store";
+import { ILocation } from "@interfaces";
 
 const initialState: ILocation = {
   lat: 0,
