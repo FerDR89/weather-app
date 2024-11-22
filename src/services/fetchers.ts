@@ -1,6 +1,6 @@
 import { axiosAPI } from "@services";
 import { isAxiosError } from "axios";
-import { ILocation } from "../lib/interfaces/location";
+import { ILocation } from "@interfaces";
 const apiKey = import.meta.env.VITE_OPEN_WEATHER_KEY;
 
 const fetchCurrentDay = async ({ lat, lon, cityName }: ILocation) => {
