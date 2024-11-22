@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-
-import { ILocation } from "../interfaces/location";
+import { ILocation } from "@interfaces";
 
 const useLocation = () => {
   const [coords, setCoords] = useState<

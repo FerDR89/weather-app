@@ -1,10 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchNextFiveDays } from "../../services/fetchers";
-import { useAppSelector } from "./useAppSelector";
-import { selectLocation } from "../reducers/locationSlice";
-
+import { fetchNextFiveDays } from "@services/fetchers";
+import { useAppSelector } from "@hooks";
+import { selectLocation } from "@reducers";
 import { weatherNextFiveFormatter } from "../utils/weatherDataFormatter";
-import { IWeather } from "../interfaces/weather";
+import { IWeather } from "@interfaces";
 
 const useNextFiveDaysWeather = () => {
   const { cityName, lat, lon } = useAppSelector(selectLocation);

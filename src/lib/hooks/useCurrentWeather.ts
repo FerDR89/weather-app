@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchCurrentDay } from "../../services/fetchers";
-import { useAppSelector } from "./useAppSelector";
-import { selectLocation } from "../reducers/locationSlice";
-import { IWeather } from "../interfaces/weather";
+import { fetchCurrentDay } from "@services/fetchers";
+import { useAppSelector } from "@hooks";
+import { selectLocation } from "@reducers";
+import { IWeather } from "@interfaces";
 import { weatherTodayFormatter } from "../utils/weatherDataFormatter";
 
 const useCurrentWeather = () => {
