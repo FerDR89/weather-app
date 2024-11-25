@@ -1,4 +1,4 @@
-import capitalize from "./capitalize";
+import { capitalize } from "@utils";
 
 const timestampToDate = (time: number): string => {
   const formattedDate = new Intl.DateTimeFormat("es-AR", {
