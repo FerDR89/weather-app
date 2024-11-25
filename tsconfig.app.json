@@ -30,7 +30,8 @@
       "@utils": ["src/lib/utils"],
       "@services": ["src/services"],
       "@store": ["src/store"]
-    }
+    },
+    "types": ["vitest/globals"]
   },
   "include": ["src"]
 }
