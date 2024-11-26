@@ -1,14 +1,15 @@
 export interface IWeather {
   day: string;
   temp: number;
+  icon: string;
+  cityName: string;
+  feels_like: number;
+  description: string;
+}
+export type IWeatherNextFiveDays = Pick<IWeather, "day" | "icon"> & {
   temp_min: number;
   temp_max: number;
-  icon: string;
-  cityName?: string;
-  feels_like?: number;
-  humidity?: number;
-  description?: string;
-}
+};
 
 export interface IWeatherTodayResponse {
   coord: Coord;
@@ -55,6 +56,8 @@ interface Main {
 }
 
 interface Sys {
+  type: number;
+  id: number;
   country: string;
   sunrise: number;
   sunset: number;
