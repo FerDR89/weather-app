@@ -1,4 +1,4 @@
-import timestampToDate from "./timestampToDate";
+import { timestampToDate } from "@utils";
 
 const getWeekDay = (time: number) => {
   return timestampToDate(time)
