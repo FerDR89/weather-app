@@ -8,15 +8,13 @@ const WeatherCard = ({
   feels_like,
   icon,
   temp,
-  temp_max,
-  temp_min,
 }: IWeather) => {
   return (
-    <article className="min-w-80 rounded bg-[#661cc4]/25 px-4 py-2 shadow-card md:grid md:gap-x-4 md:[grid-template-areas:'header_header''main_footer']">
-      <header className="text-right md:[grid-area:header]">
+    <article className="min-w-80 rounded bg-[#661cc4]/25 px-4 py-2 shadow-card sm:grid sm:gap-x-4 sm:[grid-template-areas:'header_header''main_footer']">
+      <header className="text-right sm:[grid-area:header]">
         <p className="text-sm font-light">{day}</p>
       </header>
-      <main className="mt-4 flex flex-col items-center md:[grid-area:main]">
+      <main className="mt-4 flex flex-col items-center sm:[grid-area:main]">
         <div className="mb-3 flex flex-col items-center">
           <p className="text-2xl">{cityName}</p>
           <p className="text-sm font-extralight sm:text-xs">{description}</p>
@@ -28,15 +26,11 @@ const WeatherCard = ({
           </p>
         </div>
 
-        <div className="my-1 flex items-center justify-center gap-x-2">
-          <p className="text-base font-light">Min: {temp_min} °</p>
-          <p className="text-base font-light">Max: {temp_max} °</p>
-        </div>
         <p className="my-1 text-sm font-extralight sm:text-xs">
           Sensación térmica {feels_like} °
         </p>
       </main>
-      <footer className="flex flex-col items-center justify-center md:[grid-area:footer]">
+      <footer className="flex flex-col items-center justify-center sm:[grid-area:footer]">
         <Icon iconName={icon} />
       </footer>
     </article>
