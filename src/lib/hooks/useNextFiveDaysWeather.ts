@@ -3,7 +3,7 @@ import { fetchNextFiveDays } from "@services/fetchers";
 import { useAppSelector } from "@hooks";
 import { selectLocation } from "@reducers";
 import { weatherNextFiveFormatter } from "../utils/weatherDataFormatter";
-import { IWeather } from "@interfaces";
+import { IWeatherNextFiveDays } from "@interfaces";
 
 const useNextFiveDaysWeather = () => {
   const { cityName, lat, lon } = useAppSelector(selectLocation);
@@ -22,7 +22,8 @@ const useNextFiveDaysWeather = () => {
       }),
   });
 
-  const data: IWeather[] = rawData && weatherNextFiveFormatter(rawData);
+  const data: IWeatherNextFiveDays[] =
+    rawData && weatherNextFiveFormatter(rawData);
 
   return {
     nextDaysWeather: data,
